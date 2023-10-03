@@ -1,5 +1,5 @@
 # clash_wsl2_tools
-Proxy config tools that make it convenient for you to connect or disconnect wsl2 with your windows Clash. The following is the steps to finish the config of the tools: 
+The clash_wsl2_tools are proxy config tools that make it convenient for you to connect or disconnect WSL2 with your Windows Clash. The following tutorial will show you how to use them: 
 
 1. Download the repo to your WSL2:
 
@@ -27,7 +27,7 @@ The 7890 is the default port of Clash, change it to yours. After this step, one 
 proxy_check
 ```
 
-If failed, you can modify your Windows firwall first according to the error information.
+If failed, you can modify your Windows firewall first according to the error information.
 
 5. Start proxy:
 
@@ -35,8 +35,12 @@ If failed, you can modify your Windows firwall first according to the error info
 proxy_start
 ```
 
-6. Stop proxy:
+After this cmd, you connect Clash with WSL2. Make sure you open the "Allow LAN" button in your Clash.
+
+1. Stop proxy:
 
 ```bash
 proxy_stop
 ```
+
+After this cmd, you disconnect Clash with WSL2.

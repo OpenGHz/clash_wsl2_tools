@@ -37,7 +37,7 @@ elif [ "$1" = "check" ];then
         if ping -c 1 "${WSL2_HOST_IP}" > /dev/null 2>&1; then
             echo -e "\e[1;32mip: ${WSL2_HOST_IP} ping passed.\e[0m"
         else
-            echo -e "\e[1;33mError: ip: ${WSL2_HOST_IP} ping failed, please refer to this url to configure your Windows firewall: .\e[0m"
+            echo -e "\e[1;33mError: ip: ${WSL2_HOST_IP} ping failed, please refer to this url to configure your Windows firewall: https://docs.qq.com/doc/p/fe61bf616443657832a3a18aa675c23e2b072cf9 .\e[0m"
         fi
         exit 0
     fi
