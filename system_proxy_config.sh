@@ -59,7 +59,7 @@ else
         alias proxy_check="$(pwd)/system_proxy_config.sh check"
         # set the proxy
         if [ "$1" = "start_system_proxy" ];then
-            export https_proxy="https://${WSL2_HOST_IP}:$2"
+            export https_proxy="http://${WSL2_HOST_IP}:$2"
             export http_proxy="http://${WSL2_HOST_IP}:$2"
         elif [ "$1" != "stop_system_proxy" ];then
             echo -e "\e[1;33mThere must be something wrong with your system_proxy config, because the flag is $1. \e[0m"
