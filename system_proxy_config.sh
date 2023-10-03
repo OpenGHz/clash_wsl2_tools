@@ -11,7 +11,7 @@ if [ "$1" = "start" ];then
     if grep -q "&& source system_proxy_config.sh" ~/."${SHELL##*/}"rc;then
         sed -i 's/\&\& source system_proxy_config.sh [a-z]\+_system_proxy /\&\& source system_proxy_config.sh start_system_proxy /g' ~/."${SHELL##*/}"rc
     else
-        echo -e "\e[1;33mYou should config clash_wsl2_tools first.\e[0m"
+        echo -e "\e[1;31mYou should config clash_wsl2_tools first.\e[0m"
     fi
     # immediately effective
     source ~/."${SHELL##*/}"rc
@@ -20,7 +20,7 @@ elif [ "$1" = "stop" ];then
     if grep -q "&& source system_proxy_config.sh" ~/."${SHELL##*/}"rc;then
         sed -i 's/\&\& source system_proxy_config.sh [a-z]\+_system_proxy /\&\& source system_proxy_config.sh stop_system_proxy /g' ~/."${SHELL##*/}"rc
     else
-        echo -e "\e[1;33mYou should config clash_wsl2_tools first.\e[0m"
+        echo -e "\e[1;31mYou should config clash_wsl2_tools first.\e[0m"
     fi
     unset https_proxy http_proxy
 # check the proxy
@@ -32,6 +32,7 @@ elif [ "$1" = "check" ];then
         else echo -e "\e[1;31mERROR: Connection established but no response.\e[0m" && exit 0
         fi
     else
+        echo -e "\e[1;33mCan't connect to Google.\e[0m"
         echo "Start checking whether can ping throgh WSL2 ip."
         # use ping to check the ip
         if ping -c 1 "${WSL2_HOST_IP}" > /dev/null 2>&1; then
