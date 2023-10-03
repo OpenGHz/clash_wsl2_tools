@@ -37,7 +37,7 @@ proxy_start
 
 After this cmd, you connect Clash with WSL2. Make sure you open the "Allow LAN" button in your Clash.
 
-1. Stop proxy:
+6. Stop proxy:
 
 ```bash
 proxy_stop
