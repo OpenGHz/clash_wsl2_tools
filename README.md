@@ -1,4 +1,6 @@
 # clash_wsl2_tools
+> Due to updates to WSL2, this tutorial may not be applicable at the moment, and access to the document has been stopped due to suspected violations.
+
 The clash_wsl2_tools are proxy config tools that make it convenient for you to connect or disconnect WSL2 with your Windows Clash. The following tutorial will show you how to use them: 
 
 1. Download the repo to your WSL2:
